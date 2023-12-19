@@ -1,0 +1,197 @@
+class Test11():
+
+    def __init__(self):
+        print('Constructor..')
+
+    def __str__(self):
+        return 'helloworld'
+
+
+    def __del__(self):
+        print('Object destroyed')
+
+
+t = Test11()
+print(t)
+
+
+--------------------------------------------------------------------
+
+
+
+Inheritance
+
+Single Inheritance.
+
+
+class A:
+
+    x = 10
+    def __init__(self):
+        print('Parent class contructor')
+
+    def m1(self):
+        print('In Parent class m1 method')
+
+
+class B(A):
+    y=20
+    def __init__(self):
+        A()
+        print('child constructor')
+
+    def m2(self):
+        print('in child class m2 method')
+
+
+v = B()
+print(v.x)
+print(v.y)
+v.m1()
+v.m2()
+
+
+Multiple Inheritance.
+
+
+class A:
+
+    x = 10
+
+    def m1(self):
+        print('In Parent class A m1 method')
+
+
+class B:
+    y=20
+
+    def m2(self):
+        print('in parent class B m2 method')
+
+
+class C(A,B):
+
+    z = 30
+
+    def m3(self):
+        print('in child class C m3 method')
+        
+
+
+v = C()
+print(v.x)
+print(v.y)
+print(v.z)
+v.m1()
+v.m2()
+v.m3()
+
+
+
+Multilevel inheritance.
+
+class A:
+
+    x = 10
+
+    def m1(self):
+        print('In Parent class A m1 method')
+
+
+class B(A):
+    y=20
+
+    def m2(self):
+        print('in parent class B m2 method')
+
+
+class C(B):
+
+    z = 30
+
+    def m3(self):
+        print('in child class C m3 method')
+
+
+
+v = C()
+print(v.x)
+print(v.y)
+print(v.z)
+v.m1()
+v.m2()
+v.m3()
+
+
+
+Hierrachical Inheritance.
+
+class A:
+
+    x = 10
+
+    def m1(self):
+        print('In Parent class A m1 method')
+
+
+class B(A):
+    y=20
+
+    def m2(self):
+        print('in parent class B m2 method')
+
+
+class C(A):
+
+    z = 30
+
+    def m3(self):
+        print('in child class C m3 method')
+
+
+j = B()
+print(j.x)
+print(j.y)
+j.m1()
+j.m2()
+
+v = C()
+print(v.x)
+print(v.z)
+v.m1()
+v.m3()
+
+
+
+class EncapTest:
+
+    def set_valueA(self,a):
+        self.a = a
+
+    def get_valueA(self):
+        return self.a
+
+
+v = EncapTest()
+v.set_valueA(10)
+y = v.get_valueA()
+print(y)
+
+
+
+Contructor example with encapsulation.
+
+
+
+class EncapTest:
+
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+
+    def disp(self):
+        print(self.a,self.b)
+
+
+v = EncapTest(10,20)
+v.disp()
